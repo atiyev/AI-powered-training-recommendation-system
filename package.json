@@ -1,0 +1,33 @@
+{
+  "name": "ai-training-app",
+  "version": "1.0.0",
+  "description": "AI-powered training recommendation system",
+  "main": "dist/index.js",
+  "scripts": {
+
+    "dev:api": "ts-node-dev --respawn --transpile-only src/app.ts",
+    "seed": "ts-node src/scripts/seedData.ts seed",
+    "seed:clear": "ts-node src/scripts/seedData.ts clear",
+    "seed:users": "ts-node src/scripts/seedData.ts seed-users",
+    "seed:trainings": "ts-node src/scripts/seedData.ts seed-trainings",
+    "seed:projects": "ts-node src/scripts/seedData.ts seed-projects"
+  },
+  "dependencies": {
+    "@types/axios": "^0.9.36",
+    "@xenova/transformers": "^2.17.2",
+    "axios": "^1.13.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "mongoose": "^7.5.0",
+    "openai": "^6.7.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.25",
+    "@types/node": "^20.5.0",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.1.6"
+  }
+}
