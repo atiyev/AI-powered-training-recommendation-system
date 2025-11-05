@@ -44,7 +44,7 @@ const chatHistorySchema = new Schema<IChatHistory>({
     timestamps: true
 });
 
-// Index for faster queries by user and session
+
 chatHistorySchema.index({ userId: 1, sessionId: 1 });
 
 export const ChatHistory = model<IChatHistory>('ChatHistory', chatHistorySchema);
