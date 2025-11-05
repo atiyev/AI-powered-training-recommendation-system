@@ -1,4 +1,4 @@
-// src/database.ts
+
 import mongoose from 'mongoose';
 import 'dotenv/config';
 
@@ -14,7 +14,7 @@ export const connectDB = async (): Promise<void> => {
         await mongoose.connect(uri);
         console.log('Connected to MongoDB');
 
-        // Handle connection events
+     
         mongoose.connection.on('error', (error) => {
             console.error('MongoDB connection error:', error);
         });
@@ -23,7 +23,7 @@ export const connectDB = async (): Promise<void> => {
             console.log('MongoDB disconnected');
         });
 
-        // Close the connection when Node process ends
+       
         process.on('SIGINT', async () => {
             await mongoose.connection.close();
             console.log('MongoDB connection closed due to app termination');
