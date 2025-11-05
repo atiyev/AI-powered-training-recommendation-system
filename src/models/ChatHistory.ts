@@ -7,13 +7,13 @@ export interface IChatMessage {
 }
 
 export interface IChatHistory extends Document {
-    userId: Types.ObjectId; // Reference to User
-    sessionId: string; // Unique identifier for chat session
+    userId: Types.ObjectId; 
+    sessionId: string; 
     messages: IChatMessage[];
     context: {
-        lastTrainingDiscussed?: string; // Last training ID discussed
-        lastProjectDiscussed?: string; // Last project ID discussed
-        userDepartment: string; // User's department for context
+        lastTrainingDiscussed?: string; 
+        lastProjectDiscussed?: string; 
+        userDepartment: string; 
     };
 }
 
