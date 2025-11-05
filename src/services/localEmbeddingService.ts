@@ -52,11 +52,11 @@ export class LocalEmbeddingService {
                 }
             });
 
-            console.log(`✅ Local embedding created (${embedding.length} dimensions)`);
+            console.log(`Local embedding created (${embedding.length} dimensions)`);
 
             return embedding;
         } catch (error) {
-            console.error('❌ Error creating local embedding:', error);
+            console.error(' Error creating local embedding:', error);
             throw error;
         }
     }
