@@ -3,9 +3,9 @@ import { Schema, model, Document } from 'mongoose';
 export interface ITraining extends Document {
     title: string;
     description: string;
-    duration: string; // e.g., "2 hours", "1 day"
-    targetAudience: string[]; // departments or positions that should take this
-    prerequisites: string[]; // training IDs that must be completed first
+    duration: string; 
+    targetAudience: string[]; 
+    prerequisites: string[]; 
     vectorEmbedding?: number[];
 }
 
@@ -13,8 +13,8 @@ const trainingSchema = new Schema<ITraining>({
     title: { type: String, required: true },
     description: { type: String, required: true },
     duration: { type: String, required: true },
-    targetAudience: { type: [String], default: [] }, // e.g., ["Engineering", "Marketing"]
-    prerequisites: { type: [String], default: [] }, // References to other training IDs
+    targetAudience: { type: [String], default: [] },
+    prerequisites: { type: [String], default: [] }, 
     vectorEmbedding: { type: [Number], default: undefined }
 }, {
     timestamps: true
