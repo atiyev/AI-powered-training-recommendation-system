@@ -1,6 +1,6 @@
 import { Schema, model, Document } from 'mongoose';
 
-// Define the interface for TypeScript
+
 export interface IUser extends Document {
     name: string;
     department: string;
@@ -10,7 +10,7 @@ export interface IUser extends Document {
     updatedAt: Date;
 }
 
-// Create the schema (database structure)
+
 const userSchema = new Schema<IUser>(
     {
         name: {
@@ -29,14 +29,14 @@ const userSchema = new Schema<IUser>(
             trim: true
         },
         completedTrainings: {
-            type: [String], // Array of strings
-            default: [] // Default to empty array
+            type: [String], 
+            default: [] 
         }
     },
     {
-        timestamps: true // This automatically adds createdAt and updatedAt fields
+        timestamps: true 
     }
 );
 
-// Create and export the model
+
 export const User = model<IUser>('User', userSchema);
