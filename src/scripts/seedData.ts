@@ -364,7 +364,7 @@ Examples:
         }
 
     } catch (error) {
-        console.error('❌ Script execution failed:', error);
+        console.error('Script execution failed:', error);
         process.exit(1);
     } finally {
         await disconnectDB();
